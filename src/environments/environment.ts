@@ -6,6 +6,6 @@
 let port = window.location.port || 5000;
 export const environment = {
   production: false,
-  loginUser: 'http://localhost:'+port+'/api/login',
-  registerUser: 'http://localhost:'+port+'/api/register'
+  loginUser: '/api/login',
+  registerUser: '/api/register'
 };

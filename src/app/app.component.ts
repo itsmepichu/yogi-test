@@ -18,6 +18,8 @@ export class AppComponent {
 
   ngOnInit() {
     console.log("Path Name: "+window.location.pathname);
+    console.log("Path Name: "+window.location.port);
+    console.log("Path Name: "+window.location.host);
 
     //checking for user login info in local storage. If present load homepage or else login
     let userData = JSON.parse(localStorage.getItem('user_data'));

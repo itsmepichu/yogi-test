@@ -60,6 +60,8 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         console.log("Path Name: " + window.location.pathname);
+        console.log("Path Name: " + window.location.port);
+        console.log("Path Name: " + window.location.host);
         //checking for user login info in local storage. If present load homepage or else login
         var userData = JSON.parse(localStorage.getItem('user_data'));
         console.log(userData);
@@ -698,10 +700,14 @@ var AppService = /** @class */ (function () {
     /******************************** Web Services *******************************************/
     // #API - User Login
     AppService.prototype.userLogin = function (path, params) {
+        path = "http://" + window.location.host + path;
+        console.log(path);
         return this.http.post(path, params);
     };
     // #API - Register New User
     AppService.prototype.userRegister = function (path, params) {
+        path = "http://" + window.location.host + path;
+        console.log(path);
         return this.http.post(path, params);
     };
     AppService = __decorate([
@@ -727,8 +733,8 @@ var AppService = /** @class */ (function () {
 var port = window.location.port || 5000;
 var environment = {
     production: false,
-    loginUser: 'http://localhost:' + port + '/api/login',
-    registerUser: 'http://localhost:' + port + '/api/register'
+    loginUser: '/api/login',
+    registerUser: '/api/register'
 };
 
 
