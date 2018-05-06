@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  loginUser: 'http://localhost:3000/api/login',
-  registerUser: 'http://localhost:3000/api/register'
+  loginUser: 'http://localhost:5000/api/login',
+  registerUser: 'http://localhost:5000/api/register'
 };

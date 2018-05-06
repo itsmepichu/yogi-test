@@ -214,7 +214,7 @@ module.exports = ""
 /***/ "./src/app/components/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer>\n  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>\n  <script src=\"js/style.js\"></script>\n</footer>\n"
+module.exports = "<footer>\n  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>\n</footer>\n"
 
 /***/ }),
 
@@ -726,8 +726,8 @@ var AppService = /** @class */ (function () {
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    loginUser: 'http://localhost:3000/api/login',
-    registerUser: 'http://localhost:3000/api/register'
+    loginUser: 'http://localhost:5000/api/login',
+    registerUser: 'http://localhost:5000/api/register'
 };
 
 

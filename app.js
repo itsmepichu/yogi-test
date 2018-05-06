@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
 });
 
 /************************************ Initalizing Server *****************************************/
-let server = app.listen(3000, function () {
+let server = app.listen(5000, function () {
     console.log('App server listening on port ' + server.address().port);
 });
 
