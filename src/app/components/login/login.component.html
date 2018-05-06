@@ -1,0 +1,29 @@
+<div class="login-form-container">
+  <div class="login-form">
+
+    <h3>User Login</h3>
+
+    <form form [formGroup]="loginForm" class="form-ele" id="user-login">
+
+      <div class="form-group">
+        <input formControlName="username" placeholder="Username" class="form-control" type="text">
+      </div>
+
+      <div class="form-group">
+        <input formControlName="password" placeholder="Password" class="form-control" type="password" autocomplete="new-password">
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input formControlName="remember"  type="checkbox" value=""> Remember Me
+        </label>
+      </div>
+
+      <div class="form-group">
+        <button class=" btn btn-primary" type="button" (click)="postLoginForm(loginForm.value)">Sign In</button>
+      </div>
+    </form>
+    <p *ngIf="showLoginErrorMsg" class="err-msg">Invalid Username/Password</p>
+    <p>Not registered? <a routerLink="/register">Create an account</a></p>
+  </div>
+</div>
