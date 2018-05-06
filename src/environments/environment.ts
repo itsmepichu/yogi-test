@@ -3,8 +3,9 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+let port = window.location.port || 5000;
 export const environment = {
   production: false,
-  loginUser: 'http://localhost:5000/api/login',
-  registerUser: 'http://localhost:5000/api/register'
+  loginUser: 'http://localhost:'+port+'/api/login',
+  registerUser: 'http://localhost:'+port+'/api/register'
 };
