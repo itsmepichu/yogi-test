@@ -700,13 +700,13 @@ var AppService = /** @class */ (function () {
     /******************************** Web Services *******************************************/
     // #API - User Login
     AppService.prototype.userLogin = function (path, params) {
-        path = "http://" + window.location.host + path;
+        path = "https://" + window.location.host + path;
         console.log(path);
         return this.http.post(path, params);
     };
     // #API - Register New User
     AppService.prototype.userRegister = function (path, params) {
-        path = "http://" + window.location.host + path;
+        path = "https://" + window.location.host + path;
         console.log(path);
         return this.http.post(path, params);
     };

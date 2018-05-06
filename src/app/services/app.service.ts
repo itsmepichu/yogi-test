@@ -21,14 +21,14 @@ export class AppService {
 
   // #API - User Login
   userLogin(path: string, params: any): Observable<LoginResponseModel> {
-    path = "http://"+window.location.host+path;
+    path = "https://"+window.location.host+path;
     console.log(path);
     return this.http.post<LoginResponseModel>(path, params);
   }
 
   // #API - Register New User
   userRegister(path: string, params: any): Observable<RegisterResponseModel> {
-    path = "http://"+window.location.host+path;
+    path = "https://"+window.location.host+path;
     console.log(path);
     return this.http.post<RegisterResponseModel>(path, params);
   }
